@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!--!
+	@file login.html
+	@brief Página de login da aplicação GloboTech
+	@details Esta página contém o formulário de autenticação do usuário
+	@author GloboTech Team
+	@version 1.0
+-->
+
+<!--!
+	@section head_section Configurações do documento
+	@brief Define metadados, título e referências CSS
+-->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login - To-Do List</title>
+	<link rel="stylesheet" href="style.css"/>
+</head>
+
+<!--!
+	@section body_section Corpo da página de login
+	@brief Contém toda a interface visual da página de login
+-->
+<body class="login-page">
+	<!--!
+		@section login_container Container principal do login
+		@brief Centraliza e organiza todos os elementos de login
+	-->
+	<div class="login-container">
+		<!--!
+			@section login_card Card principal de autenticação
+			@brief Contém header, formulário e link de recuperação
+		-->
+		<div class="login-card">
+			<!--!
+				@section login_header Cabeçalho do formulário
+				@brief Exibe título e subtítulo da página de login
+			-->
+			<header class="login-header">
+				<h1 class="login-title">Login</h1>
+				<p class="login-subtitle">Acesse sua lista de tarefas</p>
+			</header>
+
+			<!--!
+				@section login_form Formulário de autenticação
+				@brief Campos de email, senha e botão de login
+				@details Valida entrada do usuário e redireciona para dashboard
+			-->
+			<form class="login-form">
+				<!--!
+					@subsection email_field Campo de email
+					@brief Input para inserção do email do usuário
+				-->
+				<div class="form-group">
+					<input 
+						type="email" 
+						class="form-input" 
+						placeholder="Email"
+						required
+					>
+				</div>
+
+				<!--!
+					@subsection password_field Campo de senha
+					@brief Input para inserção da senha do usuário
+				-->
+				<div class="form-group">
+					<input 
+						type="password" 
+						class="form-input" 
+						placeholder="Senha"
+						required
+					>
+				</div>
+
+				<!--!
+					@subsection login_button Botão de acesso
+					@brief Link que simula login e redireciona para dashboard
+				-->
+				<a href="dashboard.html" class="login-button">
+					Login
+				</a>
+			</form>
+
+			<!--!
+				@section forgot_password Link de recuperação
+				@brief Link para recuperação de senha (funcionalidade mock)
+			-->
+			<a href="#" class="forgot-password">Esqueci minha senha</a>
+		</div>
+	</div>
+</body>
+</html>
