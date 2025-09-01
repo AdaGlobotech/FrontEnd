@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!--!
+	@file dashboard.html
+	@brief Página principal do dashboard da aplicação GloboTech
+	@details Página de gerenciamento de usuários e listas de tarefas
+	@author GloboTech Team
+	@version 1.0
+-->
+
+<!--!
+	@section head_section Configurações do documento
+	@brief Define metadados, título e referências CSS
+-->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Dashboard - To-Do Manager</title>
+	
+	<!-- Bootstrap 4.3.1 (apenas para resumo geral) -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	
+	<link rel="stylesheet" href="style.css"/>
+</head>
+
+<!--!
+	@section body_section Corpo da página do dashboard
+	@brief Contém header, navegação e conteúdo principal
+-->
+<body>
+	<!--!
+		@section header_section Cabeçalho da aplicação
+		@brief Barra superior com logo, informações do usuário e logout
+	-->
+	<header class="header">
+		<!--!
+			@subsection logo_section Logo da aplicação
+			@brief Exibe o nome e ícone do sistema GloboTech
+		-->
+		<div class="logo">📋 GloboTech</div>
+		
+		<!--!
+			@subsection user_info_section Informações do usuário
+			@brief Mostra avatar, nome do usuário e botão de sair
+		-->
+		<div class="user-info">
+			<div class="user-avatar">JD</div>
+			<span class="user-name">João Silva</span>
+			<a href="login.html" class="logout-btn">Sair</a>
+		</div>
+	</header>
+
+	<!--!
+		@section main_content Conteúdo principal do dashboard
+		@brief Container com todas as seções funcionais da aplicação
+	-->
+	<main class="main-content">
+		<!--!
+			@section create_user_section Seção de criação de usuário
+			@brief Formulário para cadastro de novos usuários no sistema
+		-->
+		<section class="section">
+			<h2 class="section-title">👤 Criar Novo Usuário</h2>
+			
+			<!--!
+				@subsection user_form Formulário de usuário
+				@brief Campos para nome, email, senha e foto do usuário
+			-->
+			<form class="user-form">
+				<div class="dashboard-form-group">
+					<input type="text" class="dashboard-form-input" placeholder="Nome completo" required>
+				</div>
+				
+				<div class="dashboard-form-group">
+					<input type="email" class="dashboard-form-input" placeholder="Email ou usuário" required>
+				</div>
+				
+				<div class="dashboard-form-group">
+					<input type="password" class="dashboard-form-input" placeholder="Senha" required>
+				</div>
+				
+				<div class="dashboard-form-group">
+					<label class="file-input">
+						📷 Selecionar foto
+						<input type="file" accept="image/*" style="display: none;">
+					</label>
+				</div>
+			</form>
+			
+			<!--!
+				@subsection create_user_button Botão de criação
+				@brief Submete o formulário para criar novo usuário
+			-->
+			<button class="btn btn-primary">Criar Usuário</button>
+		</section>
+
+		<!--!
+			@section task_lists_section Seção de gerenciamento de listas
+			@brief Interface para criar e gerenciar listas de tarefas
+		-->
+		<section class="section">
+			<h2 class="section-title">📝 Minhas Listas de Tarefas</h2>
+			
+			<!--!
+				@subsection new_list_form Formulário para nova lista
+				@brief Campo de input e botão para criar nova lista de tarefas
+			-->
+			<div class="new-list-form">
+				<input type="text" class="dashboard-form-input new-list-input" placeholder="Nome da nova lista">
+				<a href="todo.html" class="btn btn-primary">➕ Criar Lista</a>
+			</div>
+			
+			<!--!
+				@subsection existing_lists Listas existentes
+				@brief Grid com cards das listas de tarefas já criadas
+			-->
+			<div class="task-lists">
+				<!--!
+					@subsubsection work_list Lista de trabalho
+					@brief Card da lista de tarefas relacionadas ao trabalho
+				-->
+				<div class="task-list-card">
+					<div class="list-header">
+						<h3 class="list-title">
+							<span class="status-indicator status-active"></span>
+							Trabalho
+						</h3>
+						<div class="list-actions">
+							<a href="todo.html" class="btn btn-secondary btn-small">✏️ Abrir</a>
+							<button class="btn btn-danger btn-small">🗑️</button>
+						</div>
+					</div>
+					<div class="list-stats">
+						📊 5 tarefas • 3 concluídas
+					</div>
+					<p>Lista de tarefas relacionadas ao trabalho e projetos profissionais.</p>
+				</div>
+
+				<!--!
+					@subsubsection personal_list Lista pessoal
+					@brief Card da lista de tarefas pessoais
+				-->
+				<div class="task-list-card">
+					<div class="list-header">
+						<h3 class="list-title">
+							<span class="status-indicator status-pending"></span>
+							Pessoal
+						</h3>
+						<div class="list-actions">
+							<a href="todo.html" class="btn btn-secondary btn-small">✏️ Abrir</a>
+							<button class="btn btn-danger btn-small">🗑️</button>
+						</div>
+					</div>
+					<div class="list-stats">
+						📊 3 tarefas • 1 concluída
+					</div>
+					<p>Tarefas pessoais, compras e atividades do dia a dia.</p>
+				</div>
+
+				<!--!
+					@subsubsection studies_list Lista de estudos
+					@brief Card da lista de tarefas relacionadas a estudos
+				-->
+				<div class="task-list-card">
+					<div class="list-header">
+						<h3 class="list-title">
+							<span class="status-indicator status-active"></span>
+							Estudos
+						</h3>
+						<div class="list-actions">
+							<a href="todo.html" class="btn btn-secondary btn-small">✏️ Abrir</a>
+							<button class="btn btn-danger btn-small">🗑️</button>
+						</div>
+					</div>
+					<div class="list-stats">
+						📊 8 tarefas • 2 concluídas
+					</div>
+					<p>Cursos, leituras e materiais de estudo organizados.</p>
+				</div>
+			</div>
+		</section>
+
+		<!--!
+			@section statistics_section Seção de estatísticas
+			@brief Exibe resumo geral das listas e tarefas do usuário
+		-->
+		<section class="section">
+			<h2 class="section-title">📈 Resumo Geral</h2>
+			
+			<!--!
+				@subsection stats_grid Grid de estatísticas
+				@brief Cards com métricas principais: listas, tarefas, concluídas, pendentes
+			-->
+			<div class="row">
+				<!--!
+					@subsubsection active_lists_stat Estatística de listas ativas
+				-->
+				<div class="col-6 col-md-3 mb-3">
+					<div class="card text-center border-0" style="background: rgba(102, 126, 234, 0.1);">
+						<div class="card-body py-3">
+							<h3 class="display-4 font-weight-bold text-primary mb-1">3</h3>
+							<p class="card-text text-muted mb-0">Listas Ativas</p>
+						</div>
+					</div>
+				</div>
+				
+				<!--!
+					@subsubsection total_tasks_stat Estatística de total de tarefas
+				-->
+				<div class="col-6 col-md-3 mb-3">
+					<div class="card text-center border-0" style="background: rgba(16, 185, 129, 0.1);">
+						<div class="card-body py-3">
+							<h3 class="display-4 font-weight-bold text-success mb-1">16</h3>
+							<p class="card-text text-muted mb-0">Total de Tarefas</p>
+						</div>
+					</div>
+				</div>
+				
+				<!--!
+					@subsubsection completed_tasks_stat Estatística de tarefas concluídas
+				-->
+				<div class="col-6 col-md-3 mb-3">
+					<div class="card text-center border-0" style="background: rgba(245, 158, 11, 0.1);">
+						<div class="card-body py-3">
+							<h3 class="display-4 font-weight-bold text-warning mb-1">6</h3>
+							<p class="card-text text-muted mb-0">Concluídas</p>
+						</div>
+					</div>
+				</div>
+				
+				<!--!
+					@subsubsection pending_tasks_stat Estatística de tarefas pendentes
+				-->
+				<div class="col-6 col-md-3 mb-3">
+					<div class="card text-center border-0" style="background: rgba(239, 68, 68, 0.1);">
+						<div class="card-body py-3">
+							<h3 class="display-4 font-weight-bold text-danger mb-1">10</h3>
+							<p class="card-text text-muted mb-0">Pendentes</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+</body>
+</html>
