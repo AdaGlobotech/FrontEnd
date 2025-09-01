@@ -10,13 +10,15 @@ Professor **Dannyel Kayke**
 -  Iane Gomes
 -  Ren Wrobleski
 
-## 🧠 Divisão de tarefas & Funcionalidades implementadas
+## 🧠 Divisão de tarefas
 
 ### ✅ Ren Wrobleski – Tela dashboard e estilização
 
 ### ✅ Bernardo Soutelo – Tela TODO e Documentação
 
 ### ✅ Iane Gomes – Tela Login e estilização
+
+Todos os integrantes trabalharam na elaboração, discussao de estilo e implementação
 
 
 ## Diagrama ER
